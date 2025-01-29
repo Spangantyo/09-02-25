@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap-4.6.2-dist/css/bootstrap.css">
+    <link rel="icon" type="image/png" href="assets/image/gift.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <title>Cindi, 09-02-2025</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="night">
+
+            <div class="jumbotron jumbotron-fluid bg-transparent">
+                <div class="container">
+                    <div class="row mb-lg-5">
+                        <div class="col-md-12">
+                            <h1 class="display-4 highlight text-secondary pacifico-regular">
+                                <span>F</span><span>o</span><span>r</span><span> </span><span>Y</span><span>o</span><span>u</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <h1 id="current-date" class="current-date action-1 font-weight-bold"></h1>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-md-12">
+                            <p class="lead h5 text-secondary font-italic">I have a special gift for you!</p>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-lg text-light btn-pink" data-toggle="modal" data-target="#Bday">
+                                <i class="fas fa-gift mr-2"></i>
+                                Click Here
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="modal fade" id="Bday" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="BdayLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content shadow-lg" style="background-color: #1a1a1a; border-radius: 20px;">
+                    <div class="modal-body text-light p-5">
+                        <div class="row mb-3">
+                            <div class="col-sm-12">
+                                <button type="button" class="close text-warning" data-dismiss="modal" aria-label="Close" style="font-size: 3rem;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <img src="assets/image/cindi.jpg" class="card-img-top" style="border-radius: 20px;" alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="row mb-2 mt-2">
+                                    <div class="col-sm-12">
+                                        <h1 class="action oleo-script-bold">Happy Birthday Cindi!</h1>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-12">
+                                        <p class="h5 text-justify custom-text-size">
+                                            Shalom calon guru yg suexsyyyyy hahaha, Udah makin gede dan makin tua aja wkwkwk, aku harap km bisa jadi orang yang lebih dewasa lagi seiring bertambahnya usia mu yang sekarang udah menginjak 21 tahun. Semangat buat kuliahnya
+                                            biar soon kamu bisa jadi orang yang berguna buat orang lain, bisa bantu orang lain terutama bagi keluarga u. Kalo udah di atas jangan lupa memanusiakan manusia juga heheheh, intinya aku cm bisa ngaminin doa u, Good luck buat kedepannya, God Bless You sayang <span class="text-danger">&#10084;</span>.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-sm-12 d-flex justify-content-star">
+                                        <a href="flower/index.html" class="btn btn-lg btn-danger mr-2 text-decoration-none">See Gift</a>
+                                        <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Not Interested</button>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <blockquote class="blockquote text-right">
+                                    <p class="mb-0 custom-text-size">Btw kadonya nyusul ya heheh.</p>
+                                    <footer class="blockquote-footer">From<cite title="Source Title">Tyo Ganteng</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        const letters = document.querySelectorAll('.highlight span');
+        let currentIndex = 0;
+
+        setInterval(() => {
+            letters.forEach((letter, index) => {
+                if (index === currentIndex) {
+                    letter.classList.add('active');
+                } else {
+                    letter.classList.remove('active');
+                }
+            });
+            currentIndex = (currentIndex + 1) % letters.length;
+        }, 500);
+
+        const currentDate = new Date();
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const dayName = days[currentDate.getDay()];
+        const monthName = months[currentDate.getMonth()];
+        const date = currentDate.getDate();
+        const year = currentDate.getFullYear();
+        document.getElementById("current-date").textContent = `${dayName}, ${date} ${monthName} ${year}`;
+
+    </script>
+    <script src="assets/jquery/jquery-3.6.0.min.js"></script>
+    <script src="assets/jquery/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="assets/bootstrap-4.6.2-dist/js/bootstrap.js"></script>
+
+</body>
+
+</html>

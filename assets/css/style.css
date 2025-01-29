@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+
+:root {
+    --dark-color: #0b0c10;
+}
+
+.oleo-script-bold {
+    font-family: "Oleo Script", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Signika Negative", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.night {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(ellipse at top, transparent 0%, var(--dark-color)),
+        radial-gradient(ellipse at bottom, var(--dark-color), rgba(145, 233, 255, 0.2)),
+        repeating-linear-gradient(220deg, black 0px, black 19px, transparent 19px, transparent 22px),
+        repeating-linear-gradient(189deg, black 0px, black 19px, transparent 19px, transparent 22px),
+        repeating-linear-gradient(148deg, black 0px, black 19px, transparent 19px, transparent 22px),
+        linear-gradient(90deg, #00fffa, #f0f0f0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pacifico {
+    font-family: "Pacifico", serif;
+}
+
+.highlight {
+    font-size: 8rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    color: gray;
+}
+
+.highlight span {
+    text-shadow: none;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.highlight span.active {
+    color: #ff00ea;
+    text-shadow: 0 0 10px #ff00ea, 0 0 20px #ff00ea;
+}
+
+.message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff00ea;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ad009f;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 50px 80px 50px 80px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    width: 50%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: relative;
+    display: none;
+    align-items: center;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: scale(1);
+    display: flex;
+}
+
+.card.closing {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.card-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #CCCCCC;
+    text-align: justify;
+}
+
+.btn-pink{
+    background-color: #ff00ea;
+}
+
+.text-pink {
+    color: #ff00ea;
+}
+
+.btn-pink:hover{
+    background-color: #ad009f;
+}
+
+.card-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #ff00ea;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card-button:hover {
+    background-color: #ad009f;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #FF0000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #FF4C4C;
+}
+
+.hidden {
+    display: none;
+}
+
+.mt-1 {
+    margin-top: 300px;
+}
+
+.signature {
+    font-size: 1rem;
+    color: #CCCCCC;
+    text-align: right;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.action {
+    background: linear-gradient(90deg, #ff00ea, #00f0ff, #ffdc00);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 3s infinite;
+}
+
+.action-1 {
+    background: linear-gradient(90deg, #ff7ce5, #f7ff57, #00ff97);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 3s infinite;
+}
+
+@media (max-width: 576px) {
+
+.modal-dialog {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .modal-body {
+        padding: 2rem;
+    }
+
+    .col-sm-4,
+    .col-sm-8 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    h1.action {
+        font-size: 2rem;
+    }
+
+    .current-date{
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 0.5rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .blockquote-footer {
+        font-size: 0.9rem;
+    }
+
+    .custom-text-size {
+        font-size: 1rem;
+    }
+
+    .jumbotron {
+        padding: 20px;
+    }
+
+    .highlight {
+        font-size: 3rem;
+    }
+
+    .lead {
+        font-size: 1.2rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: 8px 8px;
+        width: 50%;
+    }
+}
