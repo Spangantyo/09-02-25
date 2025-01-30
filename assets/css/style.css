@@ -240,7 +240,7 @@ body {
     animation: gradientMove 3s infinite;
 }
 
-@media (min-width: 321px) and (max-width: 480px) {
+@media (max-width: 576px) {
 
 .modal-dialog {
         max-width: 80%;
@@ -258,7 +258,7 @@ body {
     }
 
     h1.action {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
     .current-date{
