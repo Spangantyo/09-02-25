@@ -240,7 +240,7 @@ body {
     animation: gradientMove 3s infinite;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 321px) and (max-width: 480px) {
 
 .modal-dialog {
         max-width: 80%;
